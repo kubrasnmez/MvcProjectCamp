@@ -8,25 +8,33 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <title>Index</title>
 
 </head>
 <body>
     <div class="container">
     <h3>Mvc Kamp Tablo Örneği</h3>
-    <table table border="1" cellpadding="10">
+    <table class="table table-bordered" cellpadding="10">
             <tr>
                 <th>Kategori Id</th>
                 <th>Kategori Adı</th>
                 <th>Açıklama</th>
                 <th>Durum</th>
+                <th>Güncelle</th>
             </tr>
             <tr>
                 <td></td>
+                
             </tr>
                
     </table>
+        
+        <button class="btn btn-info">Ekle</button>   
+        <button class="btn btn-primary">Listele</button>
+        <button class="btn btn-warning">Güncelle</button>
+        <button class="btn btn-danger">Sil</button>
         </div>
+        
 </body>
 </html>
