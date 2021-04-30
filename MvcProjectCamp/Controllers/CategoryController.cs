@@ -17,13 +17,21 @@ namespace MvcProjectCamp.Controllers
         {
             return View();
         }
+        [HttpGet]
         public ActionResult GetCategoryList()
         {
             var categoryValues = categoryManager.GetAll();
             return View(categoryValues);
         }
+        [HttpGet]
+        public ActionResult AddCategory()
+        {
+            return View();
+        }
+        [HttpPost]
         public ActionResult AddCategory(Category category)
         {
+            categoryManager.Add(category);
             return RedirectToAction("GetCategoryList");
         }
 

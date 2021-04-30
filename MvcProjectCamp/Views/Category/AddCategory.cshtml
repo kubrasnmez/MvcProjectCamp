@@ -9,12 +9,19 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>AddCategory</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-    <div> 
+    <div class="container"> 
         <h1>Yeni kategori ekle</h1>
         <br />
-
+        <form class="form-group" method="post">
+            <input type="text" placeholder="Kategori Adı" name="CategoryName" class="form-control" />
+            <br />
+            <input type="text" placeholder="Kategori Açıklama" name="CategoryDescription" class="form-control" />
+            <br />
+            <button class="btn btn-warning">Ekle</button>
+        </form>
     </div>
 </body>
 </html>
