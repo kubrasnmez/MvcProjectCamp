@@ -1,4 +1,4 @@
-﻿
+﻿@model EntityLayer.Concrete.Category
 @{
     Layout = null;
 }
@@ -15,6 +15,21 @@
     <div class="container"> 
         <h1>Yeni kategori ekle</h1>
         <br />
+        @using (Html.BeginForm("AddCategory","Category",FormMethod.Post))
+        {
+            <div class="form-group">
+                @Html.Label("Kategori Adı : ")
+                @Html.TextBoxFor(x=>x.CategoryName)
+                @Html.ValidationMessageFor(x=>x.CategoryName)
+                <br /><br />
+                @Html.Label("Açıklama : ")
+                @Html.TextBoxFor(x=>x.CategoryDescription)
+                @Html.ValidationMessageFor(x=>x.CategoryName)
+                <br /><br />
+                <button>Kaydet</button>
+            </div>
+        }
+        @*
         <form class="form-group" method="post">
             <input type="text" placeholder="Kategori Adı" name="CategoryName" class="form-control" />
             <br />
@@ -22,6 +37,7 @@
             <br />
             <button class="btn btn-warning">Ekle</button>
         </form>
+            *@
     </div>
 </body>
 </html>
