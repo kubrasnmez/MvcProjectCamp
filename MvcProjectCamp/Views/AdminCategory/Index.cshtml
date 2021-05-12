@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<table class="table table-bordered text-center" style="margin-top:30px;">
+<table class="table table-bordered text-center">
     <tr>
         <td>#</td>
         <td>Ad</td>
@@ -20,7 +20,7 @@
             <td>@item.CategoryId</td>
             <td>@item.CategoryName</td>
             <td>@item.CategoryDescription</td>
-            <td><a href="#" class="btn btn-danger">Sil</a></td>
+            <td><a href="/AdminCategory/DeleteCategory/@item.CategoryId" class="btn btn-danger">Sil</a></td>
             <td><a href="#" class="btn btn-warning">Güncelle</a></td>
             <td><a href="#" class="btn btn-info">Başlıklar</a></td>
         </tr>

@@ -25,9 +25,19 @@ namespace BusinessLayer.Concrete
             _categoryDal.Insert(category);
         }
 
+        public void Delete(Category category)
+        {
+            _categoryDal.Delete(category);
+        }
+
         public List<Category> GetAll()
         {
             return _categoryDal.List();
+        }
+
+        public Category GetById(int categoryId)
+        {
+            return _categoryDal.Get(c=>c.CategoryId == categoryId);
         }
     }
 }
