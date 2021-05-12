@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        p{
+            color:beige;
+            font-size:16px;
+        }
+        .card{
+            margin-top:20px;
+            border-radius:3px;
+        }
+  
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+            <div class="card" style="height: 180px; background-color: #049080">
+                <div class="card-body text-center">
+                    <br />
+                    <p class="card-text" style="color:floralwhite;"><b>@ViewBag.categoryCount</b></p>
+                    <br />
+                    <p>Toplam Kategori Sayısı</p>
+                </div>
+            </div>
+        </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+        <div class="card bg-warning" style="height:180px">
+            <div class="card-body text-center">
+                <br />
+                <p><b>@ViewBag.headingOfYazilim</b></p>
+
+                <br />
+                <p>Başlık tablosunda "yazılım" kategorisine ait başlık sayısı</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+        <div class="card" style=" height: 180px; background-color: #9d64b3;">
+            <div class="card-body text-center">
+                <br />
+                <p class="card-text"><b>@ViewBag.writer</b></p>
+                <br />
+                <p>Yazar adında 'a' harfi geçen yazar sayısı</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+        <div class="card bg-info" style="height:180px">
+            <div class="card-body text-center">
+                <br />
+                <p class="card-text"><b>@ViewBag.categoryName</b></p>
+                <br />
+                <p>En fazla başlığa sahip kategori adı</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+            <div class="card" style="height: 200px;background-color: #049080;">
+                <div class="card-body text-center">
+                    <br />
+                    <p class="card-text"><b>@ViewBag.categoryStatus</b></p>
+                    <br />
+                    <p>Kategori tablosunda durumu true olan kategoriler ile false olan kategoriler arasındaki sayısal fark</p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+</body>
+</html>
+
