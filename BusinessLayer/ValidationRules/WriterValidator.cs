@@ -16,7 +16,7 @@ namespace BusinessLayer.ValidationRules
             RuleFor(w => w.WriterSurName).NotEmpty().WithMessage("Yazar soyadını boş geçemezsiniz.");
             RuleFor(w => w.WriterAbout).NotEmpty().WithMessage("Hakkındayı boş geçemezsiniz.");
             RuleFor(w => w.WriterName).MinimumLength(2).WithMessage("Lütfen en az iki karakter giriş yapınız.");
-            RuleFor(w => w.WriterAbout).Must(ContainsTheA).WithMessage("Lütfen a harfi içeren bir metin girin.");
+            //RuleFor(w => w.WriterAbout).Must(ContainsTheA).WithMessage("Lütfen a harfi içeren bir metin girin.");
         }
         private bool ContainsTheA(string arg)
         {
