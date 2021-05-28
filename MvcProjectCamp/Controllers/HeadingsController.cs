@@ -47,6 +47,28 @@ namespace MvcProjectCamp.Controllers
             headingManager.Add(heading);
             return RedirectToAction("Index");
         }
- 
+        [HttpGet]
+        public ActionResult EditHeading(int id)
+        {
+            List<SelectListItem> valueCategory = (from c in categoryManager.GetAll()
+                                                  select new SelectListItem
+                                                  {
+                                                      Text = c.CategoryName,
+                                                      Value = c.CategoryId.ToString()
+                                                  }).ToList();
+            ViewBag.valueCategory = valueCategory;
+
+            var headingValue = headingManager.GetById(id);
+            return View(headingValue);
+        }
+        [HttpPost]
+        public ActionResult EditHeading(Heading heading)
+        {
+            headingManager.Update(heading);
+            return RedirectToAction("Index");
+        }
+
+
+
     }
 }
