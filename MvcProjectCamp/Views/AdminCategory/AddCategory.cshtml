@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>
+
     <h1>Yeni kategori ekle</h1>
     <br />
     @using (Html.BeginForm("AddCategory", "AdminCategory", FormMethod.Post))
@@ -18,8 +18,7 @@
             @Html.TextAreaFor(x => x.CategoryDescription, new { @class = "form-control" })
             @Html.ValidationMessageFor(x => x.CategoryName)
             <br /><br />
-            <button class="btn-info">Kaydet</button>
+            <button id ="kaydet"class="btn-info">Kaydet</button>
         </div>
     }
-</h2>
 
