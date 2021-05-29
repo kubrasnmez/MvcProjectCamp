@@ -2295,6 +2295,7 @@
     <Content Include="Views\Abouts\Index.cshtml" />
     <Content Include="Views\Abouts\AboutPartial.cshtml" />
     <Content Include="Views\Contacts\Index.cshtml" />
+    <Content Include="Views\Contacts\GetContactDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
