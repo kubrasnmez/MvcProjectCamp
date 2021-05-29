@@ -2292,6 +2292,7 @@
     <Content Include="Views\Content\ContentByHeading.cshtml" />
     <Content Include="Views\Headings\EditHeading.cshtml" />
     <Content Include="Views\Abouts\Index.cshtml" />
+    <Content Include="Views\Abouts\AboutPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
