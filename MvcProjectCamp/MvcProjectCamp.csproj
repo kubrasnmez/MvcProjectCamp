@@ -135,6 +135,7 @@
     <Compile Include="Controllers\AboutsController.cs" />
     <Compile Include="Controllers\AdminCategoryController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\HeadingsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -2293,6 +2294,7 @@
     <Content Include="Views\Headings\EditHeading.cshtml" />
     <Content Include="Views\Abouts\Index.cshtml" />
     <Content Include="Views\Abouts\AboutPartial.cshtml" />
+    <Content Include="Views\Contacts\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
