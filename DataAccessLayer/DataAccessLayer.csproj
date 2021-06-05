@@ -95,6 +95,10 @@
     <Compile Include="Migrations\202105282213373_migration_headingStatusAdd.designer.cs">
       <DependentUpon>202105282213373_migration_headingStatusAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106051604347_migration_addmessage.cs" />
+    <Compile Include="Migrations\202106051604347_migration_addmessage.designer.cs">
+      <DependentUpon>202106051604347_migration_addmessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -132,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105282213373_migration_headingStatusAdd.resx">
       <DependentUpon>202105282213373_migration_headingStatusAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106051604347_migration_addmessage.resx">
+      <DependentUpon>202106051604347_migration_addmessage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
