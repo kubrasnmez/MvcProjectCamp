@@ -139,6 +139,7 @@
     <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\HeadingsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Controllers\StatisticController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\WritersController.cs" />
@@ -2297,6 +2298,9 @@
     <Content Include="Views\Contacts\Index.cshtml" />
     <Content Include="Views\Contacts\GetContactDetails.cshtml" />
     <Content Include="Views\Contacts\MessageListMenu.cshtml" />
+    <Content Include="Views\Messages\Inbox.cshtml" />
+    <Content Include="Views\Messages\Sendbox.cshtml" />
+    <Content Include="Views\Messages\AddMessage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
