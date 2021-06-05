@@ -81,11 +81,27 @@
                                                 </div>
                                             </td>
                                             <td class="mailbox-star"><a href=""><i class="fas fa-star text-warning"></i></a></td>
-                                            <td class="mailbox-name"><a href="/Contacts/GetContactDetails/@item.MessageId">@item.ReceiverMail</a></td>
+                                            <td class="mailbox-name"><a href="/Messages/GetSendboxMessageDetails/@item.MessageId">@item.ReceiverMail</a></td>
                                             <td class="mailbox-subject">
                                                 <b>@item.Subject</b> - @item.MessageContent
                                             </td>
-                                            <td class="mailbox-attachment"></td>
+                                            <td class="mailbox-attachment">
+                                                <span class="mailbox-read-time float-right">
+                                                    @{
+                                                        DateTime bugunTarih = DateTime.Now;
+                                                        var tarih = item.MessageDate;
+                                                        var kalanSure = (bugunTarih - tarih);
+                                                    }
+
+                                                    @if (@kalanSure.Days == 0)
+                                                    {
+                                                        <p>Bugün</p>
+                                                    }
+                                                    else
+                                                    {
+                                                        @kalanSure.Days <p>gün önce</p>}
+                                                </span>
+                                            </td>
                                             
                                         </tr>
                                     }

@@ -1,7 +1,6 @@
-﻿@model EntityLayer.Concrete.Contact
-
+﻿@model EntityLayer.Concrete.Message
 @{
-    ViewBag.Title = "GetContactDetails";
+    ViewBag.Title = "GetSendboxMessageDetails";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -44,11 +43,25 @@
 
                         <div class="card-body p-0">
                             <div class="mailbox-read-info">
-                                <h5><b>Konu : </b>@Html.DisplayFor(x => x.Subject)</h5>
+                                <h5><b>Konu : </b>@Model.Subject</h5>
 
                                 <h6>
-                                    <b> Mail :</b>@Html.DisplayFor(x => x.UserMail)
-                                    <span class="mailbox-read-time float-right">15 Feb. 2015 11:03 PM</span>
+                                    <b> Mail :</b>@Model.ReceiverMail
+                                <span class="mailbox-read-time float-right">
+                                    @{
+                                        DateTime bugunTarih = DateTime.Now;
+                                        var tarih = Model.MessageDate;
+                                        var kalanSure = (bugunTarih - tarih);
+                                    }
+
+                                    @if (@kalanSure.Days == 0)
+                                    {
+                                        <p>Bugün</p>
+                                    }
+                                    else
+                                    {
+                                        @kalanSure.Days <p>gün önce</p>}
+                                </span>
                                 </h6>
                             </div>
                             <!-- /.mailbox-read-info -->
@@ -71,7 +84,7 @@
                             </div>
                             <!-- /.mailbox-controls -->
                             <div class="mailbox-read-message">
-                                <p>@Html.DisplayFor(x => x.Message)</p>
+                                <p>@Model.MessageContent</p>
 
                             </div>
                             <!-- /.mailbox-read-message -->

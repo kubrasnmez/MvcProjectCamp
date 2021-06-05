@@ -85,8 +85,15 @@
                                             <td class="mailbox-subject">
                                                 <b>@item.Subject</b> - @item.MessageContent.Substring(10)
                                             </td>
-                                            <td class="mailbox-attachment"></td>
-                                            <td class="mailbox-date">5 mins ago</td>
+                                            <td class="mailbox-date">
+                                                @{ 
+                                                    DateTime bugunTarih = DateTime.Now;
+                                                    var tarih = item.MessageDate;
+                                                    var kalanSure = (bugunTarih - tarih);
+
+                                                }
+                                                @kalanSure.Days gün önce
+                                            </td>
                                         </tr>
                                     }
                                 </tbody>
