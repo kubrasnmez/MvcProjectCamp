@@ -138,6 +138,7 @@
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\ErrorPagesController.cs" />
+    <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HeadingsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
@@ -311,6 +312,15 @@
     <Content Include="AdminLTE-3.0.4\docs\_layouts\home.html" />
     <Content Include="AdminLTE-3.0.4\docs\_layouts\page.html" />
     <Content Include="AdminLTE-3.0.4\docs\_layouts\post.html" />
+    <Content Include="AdminLTE-3.0.4\galleryimages\balkon.jpg" />
+    <Content Include="AdminLTE-3.0.4\galleryimages\huzur.jpg" />
+    <Content Include="AdminLTE-3.0.4\galleryimages\istanbul.jpg" />
+    <Content Include="AdminLTE-3.0.4\galleryimages\kisbahcesi.jpg" />
+    <Content Include="AdminLTE-3.0.4\galleryimages\kuzeyisiklari.jpg" />
+    <Content Include="AdminLTE-3.0.4\galleryimages\livrarialello.jpg" />
+    <Content Include="AdminLTE-3.0.4\galleryimages\manzara.jpg" />
+    <Content Include="AdminLTE-3.0.4\galleryimages\ortakoy.jpg" />
+    <Content Include="AdminLTE-3.0.4\galleryimages\paris.jpg" />
     <Content Include="AdminLTE-3.0.4\index.html" />
     <Content Include="AdminLTE-3.0.4\index2.html" />
     <Content Include="AdminLTE-3.0.4\index3.html" />
@@ -2309,6 +2319,7 @@
     <Content Include="Views\Messages\GetInboxMessageDetails.cshtml" />
     <Content Include="Views\Messages\GetSendboxMessageDetails.cshtml" />
     <Content Include="Views\ErrorPages\Page404.cshtml" />
+    <Content Include="Views\Gallery\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
