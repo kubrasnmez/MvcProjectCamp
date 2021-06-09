@@ -16,6 +16,8 @@ namespace MvcProjectCamp.Controllers
         // GET: Category
 
         CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
+
+        [Authorize]
         public ActionResult Index()
         {
             return View();
