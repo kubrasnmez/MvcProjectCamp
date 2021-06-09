@@ -57,22 +57,23 @@ to get the desired effect
                         <a href="#" class="d-block">Alexander Pierce</a>
                     </div>
                 </div>
-
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                              with font-awesome or any other icon font library -->
-                        <li class="nav-item has-treeview menu-open">
-                            <a href="/AdminCategory/Index" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Kategoriler
-                                    
-                                </p>
-                            </a>
-       
-                        </li>
+                        @if (User.IsInRole("A"))
+                        {
+                            <li class="nav-item has-treeview menu-open">
+                                <a href="/AdminCategory/Index" class="nav-link">
+                                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                                    <p>
+                                        Kategoriler
+
+                                    </p>
+                                </a>
+                            </li>
+                        }
                         <li class="nav-item">
                             <a href="/Headings/Index" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
@@ -125,7 +126,7 @@ to get the desired effect
                                     Hakkımızda
                                 </p>
                             </a>
-                            
+
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="/Contacts/Index" class="nav-link">
@@ -134,17 +135,9 @@ to get the desired effect
                                     İletişim & Mesajlar
                                 </p>
                             </a>
-                            
+
                         </li>
-                        <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-table"></i>
-                                <p>
-                                    Yazılar
-                                </p>
-                            </a>
-                            
-                        </li>
+            
                         <li class="nav-item">
                             <a href="pages/calendar.html" class="nav-link">
                                 <i class="nav-icon fas fa-calendar-alt"></i>
@@ -154,7 +147,7 @@ to get the desired effect
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/gallery.html" class="nav-link">
+                            <a href="/Gallery/Index" class="nav-link">
                                 <i class="nav-icon far fa-image"></i>
                                 <p>
                                     Galeri
@@ -169,7 +162,7 @@ to get the desired effect
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
-                            
+
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
@@ -178,7 +171,7 @@ to get the desired effect
                                     Siteye Git
                                 </p>
                             </a>
-                            
+
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
@@ -187,7 +180,7 @@ to get the desired effect
                                     Çıkış Yap
                                 </p>
                             </a>
-                            
+
                         </li>
                     </ul>
                 </nav>

@@ -15,7 +15,7 @@ namespace MvcProjectCamp.Controllers
     {
         // GET: AdminCategory
         CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
-        [Authorize]
+        [Authorize(Roles = "A")]
         public ActionResult Index()
         {
             var categoryValues = categoryManager.GetAll();
