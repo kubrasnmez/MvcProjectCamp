@@ -34,5 +34,19 @@ namespace MvcProjectCamp.Controllers
         {
             return PartialView();
         }
+        public ActionResult StatusActiveAndPassive(int id)
+        {
+            var aboutValue = aboutManager.GetById(id);
+            if(aboutValue.AboutStatus == true)
+            {
+                aboutValue.AboutStatus = false;
+            }
+            else
+            {
+                aboutValue.AboutStatus = true;
+            }
+            aboutManager.Update(aboutValue);
+            return RedirectToAction("Index");
+        }
     }
 }
